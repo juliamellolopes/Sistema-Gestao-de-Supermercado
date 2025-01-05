@@ -69,22 +69,20 @@ Sistema-Gestao-de-Supermercado/
 
 1. Clone este repositório:
    ```bash
-   git clone git@github.com:juliamellolopes/Sistema-Gestao-de-Supermercado.git
+   git clone https://github.com/seuusuario/sistema-gestao-de-filas.git
    ```
 2. Navegue até o diretório do projeto:
    ```bash
    cd sistema-gestao-de-filas
    ```
 3. Compile o projeto utilizando o Makefile:
-   ```
-   bashmake
+   ```bash
+   make
    ```
 4. Execute o sistema:
-
-   ```make run
-
+   ```bash
+   make run
    ```
-
 5. Para limpar os arquivos compilados:
    ```bash
    make clean
