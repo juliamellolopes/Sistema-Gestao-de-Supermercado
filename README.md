@@ -71,19 +71,15 @@ Sistema-Gestao-de-Supermercado/
    ```bash
    git clone https://github.com/seuusuario/sistema-gestao-de-filas.git
    ```
-2. Navegue até o diretório do projeto:
-   ```bash
-   cd sistema-gestao-de-filas
-   ```
-3. Compile o projeto utilizando o Makefile:
+2. Compile o projeto utilizando o Makefile:
    ```bash
    make
    ```
-4. Execute o sistema:
+3. Execute o sistema:
    ```bash
    make run
    ```
-5. Para limpar os arquivos compilados:
+4. Para limpar os arquivos compilados:
    ```bash
    make clean
    ```
@@ -173,5 +169,7 @@ Caixa 2 fechado. Clientes realocados para caixas abertos.
 ## 👨‍💻 Autor
 
 Este projeto foi desenvolvido como parte do curso de Engenharia de Computação no **CEFET-MG**, para a disciplina **Tópicos Especiais em Fundamentos da Engenharia de Computação**.
+
+**Autora:** Julia Mello Lopes Gonçalves
 
 **Professor Orientador:** Tiago Alves de Oliveira
