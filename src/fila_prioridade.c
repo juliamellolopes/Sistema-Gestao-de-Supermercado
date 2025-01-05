@@ -19,13 +19,35 @@ FilaPrioridade *criar_fila() {
 void enfileirar(FilaPrioridade *fila, Cliente *cliente) {
     if (!fila || !cliente) return;
 
-    if (!fila->inicio) { // Caso a fila esteja vazia
+    // Caso a fila esteja vazia, insere no início
+    if (!fila->inicio) {
         fila->inicio = fila->fim = cliente;
-    } else { // Adiciona o cliente ao final da fila
-        fila->fim->prox = cliente;
+        return;
+    }
+
+    // Caso o cliente tenha prioridade maior que o primeiro da fila (menor número)
+    if (cliente->prioridade < fila->inicio->prioridade) {
+        cliente->prox = fila->inicio;
+        fila->inicio = cliente;
+        return;
+    }
+
+    // Procura o local correto para inserir o cliente na fila
+    Cliente *atual = fila->inicio;
+    while (atual->prox && atual->prox->prioridade <= cliente->prioridade) {
+        atual = atual->prox;
+    }
+
+    // Insere o cliente na posição encontrada
+    cliente->prox = atual->prox;
+    atual->prox = cliente;
+
+    // Atualiza o final da fila, se necessário
+    if (!cliente->prox) {
         fila->fim = cliente;
     }
 }
+
 
 // Remove o cliente de maior prioridade da fila (início).
 Cliente *desenfileirar(FilaPrioridade *fila) {

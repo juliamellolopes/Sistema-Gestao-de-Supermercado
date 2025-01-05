@@ -9,7 +9,7 @@
 #define NUM_CAIXAS 5
 
 void menu() {
-    printf("\nSistema de Gestão de Filas\n");
+    printf("\nSistema de Gestao de Filas\n");
     printf("1. Cadastrar Cliente\n");
     printf("2. Atender Cliente\n");
     printf("3. Abrir Caixa\n");
