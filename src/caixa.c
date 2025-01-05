@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "caixa.h"
 
+// Cria um novo caixa com um ID específico
 Caixa *criar_caixa(int id) {
     Caixa *novo = (Caixa *)malloc(sizeof(Caixa));
     if (!novo) {
@@ -14,10 +15,12 @@ Caixa *criar_caixa(int id) {
     return novo;
 }
 
+// Define o estado do caixa como aberto
 void abrir_caixa(Caixa *caixa) {
     if (caixa) caixa->aberto = 1;
 }
 
+// Fecha um caixa e realoca seus clientes para caixas abertos
 void fechar_caixa(Caixa *caixa, Caixa *caixas[], int num_caixas) {
     if (!caixa || !caixa->aberto) return;
 
@@ -25,6 +28,7 @@ void fechar_caixa(Caixa *caixa, Caixa *caixas[], int num_caixas) {
     realocar_clientes(caixa->fila, caixas, num_caixas);
 }
 
+// Função para realocar os clientes caso o caixa seja fechado
 void realocar_clientes(FilaPrioridade *fila_origem, Caixa *caixas[], int num_caixas) {
     Cliente *cliente = NULL;
     while ((cliente = desenfileirar(fila_origem)) != NULL) {
@@ -37,6 +41,7 @@ void realocar_clientes(FilaPrioridade *fila_origem, Caixa *caixas[], int num_cai
     }
 }
 
+// Imprime o estado do caixa e sua fila
 void imprimir_caixa(const Caixa *caixa) {
     printf("Caixa %d: %s\n", caixa->id, caixa->aberto ? "Aberto" : "Fechado");
     printf("Clientes na fila:\n");

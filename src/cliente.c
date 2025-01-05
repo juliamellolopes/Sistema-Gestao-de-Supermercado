@@ -3,6 +3,7 @@
 #include <string.h>
 #include "cliente.h"
 
+// Cria um novo cliente com os dados fornecidos
 Cliente *criar_cliente(const char *nome, const char *cpf, int prioridade, int num_itens) {
     Cliente *novo = (Cliente *)malloc(sizeof(Cliente));
     if (!novo) {
@@ -17,6 +18,7 @@ Cliente *criar_cliente(const char *nome, const char *cpf, int prioridade, int nu
     return novo;
 }
 
+// Exibe os dados de um cliente na saída padrão
 void imprimir_cliente(const Cliente *cliente) {
     if (cliente) {
         printf("Nome: %s\nCPF: %s\nPrioridade: %d\nItens no carrinho: %d\n",
