@@ -7,6 +7,7 @@ Este projeto é um sistema de gestão de filas desenvolvido em linguagem **C**. 
 ## 📋 Especificações do Trabalho
 
 - **Estruturas de Dados Utilizadas:**
+
   - **Cliente:**
     - Nome (até 100 caracteres)
     - CPF (11 dígitos)
@@ -19,6 +20,7 @@ Este projeto é um sistema de gestão de filas desenvolvido em linguagem **C**. 
     - Lista encadeada para gerenciar clientes organizados por prioridade
 
 - **Número de Caixas:**
+
   - O sistema inicia com 5 caixas abertos.
   - Não é possível adicionar mais caixas.
   - Caixas podem ser abertos ou fechados durante a execução.
@@ -59,26 +61,30 @@ Sistema-Gestao-de-Supermercado/
 ## 🛠️ Como Compilar e Executar
 
 ### **Pré-requisitos**
+
 - Compilador `gcc` instalado.
 - Sistema operacional compatível com ferramentas de linha de comando.
 
 ### **Passo a Passo**
+
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seuusuario/sistema-gestao-de-filas.git
+   git clone git@github.com:juliamellolopes/Sistema-Gestao-de-Supermercado.git
    ```
 2. Navegue até o diretório do projeto:
    ```bash
    cd sistema-gestao-de-filas
    ```
 3. Compile o projeto utilizando o Makefile:
-   ```bash
-   make
+   ```
+   bashmake
    ```
 4. Execute o sistema:
-   ```bash
-   ./bin/supermercado
+
+   ```make run
+
    ```
+
 5. Para limpar os arquivos compilados:
    ```bash
    make clean
@@ -89,6 +95,7 @@ Sistema-Gestao-de-Supermercado/
 ## 🚀 Funcionalidades
 
 ### **1. Cadastrar Cliente**
+
 - Solicita os seguintes dados:
   - Nome
   - CPF (11 dígitos)
@@ -98,23 +105,29 @@ Sistema-Gestao-de-Supermercado/
 - Valida os dados antes do cadastro.
 
 ### **2. Atender Cliente**
+
 - Remove o cliente de maior prioridade da fila de um caixa.
 - Exibe os dados do cliente atendido.
 
 ### **3. Abrir Caixa**
+
 - Altera o estado de um caixa para "Aberto".
 
 ### **4. Fechar Caixa**
+
 - Altera o estado de um caixa para "Fechado".
 - Realoca os clientes da fila do caixa fechado para outros caixas abertos.
 
 ### **5. Imprimir Lista de Clientes**
+
 - Exibe os clientes em espera em cada caixa, organizados por prioridade.
 
 ### **6. Imprimir Status dos Caixas**
+
 - Mostra o estado de cada caixa e a quantidade de clientes em espera.
 
 ### **7. Sair**
+
 - Encerra o programa.
 
 ---
@@ -122,6 +135,7 @@ Sistema-Gestao-de-Supermercado/
 ## 📖 Exemplos de Uso
 
 ### **Cadastro de Cliente**
+
 ```
 Nome: João
 CPF: 12345678901
@@ -132,6 +146,7 @@ Cliente cadastrado com sucesso no caixa 2.
 ```
 
 ### **Atendimento de Cliente**
+
 ```
 Caixa para atendimento (1-5): 2
 Cliente atendido:
@@ -142,6 +157,7 @@ Itens no carrinho: 10
 ```
 
 ### **Fechamento de Caixa**
+
 ```
 Fechar caixa (1-5): 2
 Caixa 2 fechado. Clientes realocados para caixas abertos.
@@ -150,12 +166,14 @@ Caixa 2 fechado. Clientes realocados para caixas abertos.
 ---
 
 ## 🖋️ Observações Importantes
+
 - Caso todos os caixas estejam fechados, o sistema não permitirá o cadastro de novos clientes.
 - O sistema exige que os dados do cliente sejam válidos antes de serem cadastrados.
 
 ---
 
 ## 👨‍💻 Autor
+
 Este projeto foi desenvolvido como parte do curso de Engenharia de Computação no **CEFET-MG**, para a disciplina **Tópicos Especiais em Fundamentos da Engenharia de Computação**.
 
 **Professor Orientador:** Tiago Alves de Oliveira
